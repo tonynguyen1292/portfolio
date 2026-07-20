@@ -69,12 +69,14 @@ Free tier: 100 submissions/month — plenty.
 
 ### Go live checklist (after first deploy)
 
-1. **Update the domain placeholder** — replace `vynguyen-portfolio.netlify.app` with your
-   real URL in exactly 3 files (search for `TODO-DOMAIN`):
-   - `index.html` (canonical + og:url + og:image + JSON-LD, all in `<head>`)
-   - `robots.txt` (Sitemap line)
-   - `sitemap.xml` (the `<loc>` URL)
-2. Commit + push (or re-drag the folder). 
+> The site is live at **https://vynguyen-perth.netlify.app** (deployed 20 Jul 2026 via
+> `netlify deploy --prod`; the folder is linked to project `vynguyen-perth`, so future
+> deploys are just `npx netlify-cli deploy --prod --dir .`).
+
+1. **Domain URLs** — already set to `vynguyen-perth.netlify.app` in `index.html`
+   (canonical/OG/JSON-LD), `robots.txt` and `sitemap.xml`. If you attach a custom
+   domain later, update the same three files.
+2. Commit + push (or redeploy via CLI).
 3. Test the form once from the live site.
 4. Paste your live URL into [opengraph.xyz](https://www.opengraph.xyz) to preview the
    LinkedIn share card.

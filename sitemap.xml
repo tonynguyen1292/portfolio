@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- TODO-DOMAIN: update after deployment (see README "Go live" step 4) -->
   <url>
-    <loc>https://vynguyen-portfolio.netlify.app/</loc>
+    <loc>https://vynguyen-perth.netlify.app/</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
