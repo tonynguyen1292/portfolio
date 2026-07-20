@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en-AU" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Vy Nguyen — Business Analyst &amp; Data Analyst | Perth, WA</title>
+  <meta name="description" content="ECBA-certified business &amp; data analyst in Perth with a Master of Computer Science. I take messy datasets from requirements and process maps to SQL pipelines, Power BI dashboards and tested full-stack applications.">
+  <meta name="author" content="Duc Vy Nguyen">
+
+  <!-- TODO-DOMAIN: replace vynguyen-portfolio.netlify.app in the 4 URLs below after deployment (see README) -->
+  <link rel="canonical" href="https://vynguyen-portfolio.netlify.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vynguyen-portfolio.netlify.app/">
+  <meta property="og:title" content="Vy Nguyen — Business Analyst &amp; Data Analyst | Perth, WA">
+  <meta property="og:description" content="From business question to working answer: requirements, SQL, Power BI — and the engineering skills to ship what I specify.">
+  <meta property="og:image" content="https://vynguyen-portfolio.netlify.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_AU">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="theme-color" content="#FAF6F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#171310" media="(prefers-color-scheme: dark)">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    // Set theme before first paint to avoid a flash of the wrong mode.
+    // The "js" class arms scroll-reveal styles — without JS, content stays visible.
+    (function () {
+      document.documentElement.classList.add('js');
+      try {
+        var saved = localStorage.getItem('vn-theme');
+        var dark = saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+      } catch (e) { /* default stays light */ }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Duc Vy Nguyen",
+    "alternateName": "Vy Nguyen",
+    "jobTitle": "Business Analyst & Data Analyst",
+    "email": "mailto:tonynguyen1996.jb@gmail.com",
+    "url": "https://vynguyen-portfolio.netlify.app/",
+    "image": "https://vynguyen-portfolio.netlify.app/assets/og-image.png",
+    "address": { "@type": "PostalAddress", "addressLocality": "Perth", "addressRegion": "WA", "addressCountry": "AU" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Edith Cowan University" },
+      { "@type": "CollegeOrUniversity", "name": "University of Science, VNU-HCM" },
+      { "@type": "CollegeOrUniversity", "name": "New Brunswick Community College" }
+    ],
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Entry Certificate in Business Analysis (ECBA)",
+      "credentialCategory": "certification",
+      "recognizedBy": { "@type": "Organization", "name": "International Institute of Business Analysis (IIBA)" }
+    },
+    "knowsLanguage": ["en", "vi", "ja"],
+    "sameAs": [
+      "https://www.linkedin.com/in/vynguyen1996/",
+      "https://github.com/tonynguyen1292"
+    ]
+  }
+  </script>
+</head>
+
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Vy Nguyen — back to top">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="14" class="brand-bg"/>
+          <rect x="13" y="34" width="10" height="17" rx="3" class="brand-bar"/>
+          <rect x="27" y="24" width="10" height="27" rx="3" class="brand-bar"/>
+          <rect x="41" y="13" width="10" height="38" rx="3" class="brand-bar"/>
+        </svg>
+        <span class="brand-name">Vy Nguyen</span>
+      </a>
+
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#journey" class="nav-link">Journey</a></li>
+        <li><a href="#credentials" class="nav-link">Credentials</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="nav-cv-item"><a class="btn btn-outline btn-small" href="assets/Vy-Nguyen-CV-Business-Analyst.pdf" download>Download CV</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.4 14.2A8.5 8.5 0 0 1 9.8 3.6a8.5 8.5 0 1 0 10.6 10.6Z"/></svg>
+        </button>
+        <button class="nav-burger" id="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================== HERO ============================== -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-backdrop" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">Perth, Western Australia · open to analyst roles</p>
+          <h1 class="hero-title reveal">From business question to <em class="hero-em">working answer</em>.</h1>
+          <p class="hero-lede reveal">I'm Vy Nguyen — an ECBA-certified business &amp; data analyst with a Master of Computer Science. I take messy datasets through requirements, process maps and SQL to dashboards people trust — and when the report needs to become a product, I build that too.</p>
+
+          <div class="pipeline reveal" role="group" aria-label="How every project here travels: question, requirements, clean data, dashboard, product. Select a step for detail.">
+            <div class="pipe-steps" id="pipeline">
+              <button class="pipe-step" type="button" aria-expanded="false" aria-label="Step 1 of 5: Question">
+                <span class="pipe-label" aria-hidden="true">Question</span>
+                <span class="pipe-tip" role="tooltip">Stakeholder interviews, problem statements, scoped business cases.</span>
+              </button>
+              <span class="pipe-arrow" aria-hidden="true">→</span>
+              <button class="pipe-step" type="button" aria-expanded="false" aria-label="Step 2 of 5: Requirements">
+                <span class="pipe-label" aria-hidden="true">Requirements</span>
+                <span class="pipe-tip" role="tooltip">Requirements catalogues, user stories, BPMN AS-IS/TO-BE, data dictionaries.</span>
+              </button>
+              <span class="pipe-arrow" aria-hidden="true">→</span>
+              <button class="pipe-step" type="button" aria-expanded="false" aria-label="Step 3 of 5: Clean data">
+                <span class="pipe-label" aria-hidden="true">Clean data</span>
+                <span class="pipe-tip" role="tooltip">SQL pipelines in PostgreSQL — cleansing, validation, reconciliation.</span>
+              </button>
+              <span class="pipe-arrow" aria-hidden="true">→</span>
+              <button class="pipe-step" type="button" aria-expanded="false" aria-label="Step 4 of 5: Dashboard">
+                <span class="pipe-label" aria-hidden="true">Dashboard</span>
+                <span class="pipe-tip" role="tooltip">Power BI with DAX measures that count the right things.</span>
+              </button>
+              <span class="pipe-arrow" aria-hidden="true">→</span>
+              <button class="pipe-step" type="button" aria-expanded="false" aria-label="Step 5 of 5: Product">
+                <span class="pipe-label" aria-hidden="true">Product</span>
+                <span class="pipe-tip" role="tooltip">FastAPI + React applications with CI-enforced test suites.</span>
+              </button>
+            </div>
+            <p class="pipe-caption">The route every project on this page follows. Hover or tap a step.</p>
+          </div>
+
+          <div class="hero-cta reveal">
+            <a class="btn btn-primary" href="#projects">Explore the work
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v14m0 0 6-6m-6 6-6-6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="assets/Vy-Nguyen-CV-Business-Analyst.pdf" download>Download CV
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 19h16"/></svg>
+            </a>
+            <div class="hero-social">
+              <a href="https://www.linkedin.com/in/vynguyen1996/" rel="noopener" aria-label="LinkedIn profile" class="icon-link">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 8.8v10.7H3V8.8h3.5ZM4.8 3.5a2 2 0 1 1 0 4.1 2 2 0 0 1 0-4.1ZM21 13.9v5.6h-3.5v-5.2c0-1.3-.5-2.2-1.7-2.2-.9 0-1.4.6-1.7 1.2-.1.2-.1.5-.1.8v5.4H10.5s.05-8.8 0-9.7H14v1.4c.5-.7 1.3-1.7 3.1-1.7 2.3 0 3.9 1.5 3.9 4.4Z" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="https://github.com/tonynguyen1292" rel="noopener" aria-label="GitHub profile" class="icon-link">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7 0-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .6 1.4.2 2.4.1 2.7.7.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2Z" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="mailto:tonynguyen1996.jb@gmail.com" aria-label="Email Vy" class="icon-link">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="deck" id="deck">
+            <article class="deck-card deck-card--req">
+              <header class="deck-head"><span class="deck-dot"></span>requirements-catalogue.md</header>
+              <ul class="deck-req">
+                <li><span class="req-id">BR-01</span> Portfolio visibility <span class="req-tick">✓</span></li>
+                <li><span class="req-id">BR-02</span> One source of truth <span class="req-tick">✓</span></li>
+                <li><span class="req-id">FR-14</span> Filter by commodity <span class="req-tick">✓</span></li>
+              </ul>
+              <footer class="deck-chip">19-field data dictionary</footer>
+            </article>
+
+            <article class="deck-card deck-card--sql">
+              <header class="deck-head"><span class="deck-dot"></span>clean_pipeline.sql · step 3 of 5</header>
+              <pre class="deck-code"><code><span class="c">-- standardise LGA names</span>
+UPDATE sites
+SET lga = REPLACE(lga,
+  'SHIRE OF ', '');
+<span class="c">-- 421 rows verified</span></code></pre>
+            </article>
+
+            <article class="deck-card deck-card--dash">
+              <header class="deck-head"><span class="deck-dot"></span>WA Mining Portfolio · Power BI</header>
+              <div class="deck-kpis">
+                <div class="deck-kpi"><span class="deck-kpi-num">421</span><span class="deck-kpi-label">sites</span></div>
+                <div class="deck-kpi"><span class="deck-kpi-num">356</span><span class="deck-kpi-label">projects</span></div>
+              </div>
+              <div class="deck-chart">
+                <svg viewBox="0 0 220 96" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                  <line x1="0" y1="88" x2="220" y2="88" class="chart-base"/>
+                  <rect class="bar" x="10"  y="52" width="22" height="36" rx="3"/>
+                  <rect class="bar" x="46"  y="40" width="22" height="48" rx="3"/>
+                  <rect class="bar" x="82"  y="58" width="22" height="30" rx="3"/>
+                  <rect class="bar" x="118" y="30" width="22" height="58" rx="3"/>
+                  <rect class="bar bar--hi" x="154" y="14" width="22" height="74" rx="3"/>
+                  <rect class="bar" x="190" y="46" width="22" height="42" rx="3"/>
+                </svg>
+                <span class="deck-chart-label">Sites by region</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <dl class="hero-stats reveal">
+          <div class="stat"><dt class="stat-label">mine sites modelled</dt><dd class="stat-num" data-count="421">421</dd></div>
+          <div class="stat"><dt class="stat-label">projects tracked</dt><dd class="stat-num" data-count="356">356</dd></div>
+          <div class="stat"><dt class="stat-label">records verified</dt><dd class="stat-num" data-count="73132" data-format="comma">73,132</dd></div>
+          <div class="stat"><dt class="stat-label">backlog issues delivered</dt><dd class="stat-num" data-count="41">41</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============================== ABOUT ============================== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">I sit where the business meets the build.</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-story">
+            <p class="reveal">My route here runs through three countries: a computer science degree in Ho Chi Minh City, a cybersecurity diploma in Canada, and a Master of Computer Science at Edith Cowan University here in Perth. Along the way I noticed that projects rarely fail in the code — they fail in the gap between what the business meant and what the team heard.</p>
+            <p class="reveal">So that gap became my job. At Spirited Thinking I turned a client's idea for an AI image-classification system into functional specs and test cases a delivery team could build against. At FPT I automated SAP reporting after sitting with the people who actually ran the reports. In 2026 I made the transition formal: the ECBA certification from the IIBA, and a portfolio of self-run projects governed the way real delivery works — business cases, requirements catalogues, BPMN maps and sprint backlogs, not just notebooks.</p>
+            <p class="reveal">The computer science isn't a past life; it's the advantage. My requirements are buildable, my data models hold up under real queries, and when a dashboard needs to become a product, I don't hand the problem to someone else.</p>
+            <p class="about-now reveal"><span class="now-dot" aria-hidden="true"></span><strong>Now:</strong>&nbsp;completing an ACS Professional Year in IT · interviewing for Business Analyst and Data Analyst roles in Perth · available now</p>
+          </div>
+
+          <div class="about-cards">
+            <article class="strength-card reveal">
+              <h3>Structured by default</h3>
+              <p>Even my personal projects have charters, risk registers and a 41-issue backlog. Governance isn't overhead — it's how work becomes checkable.</p>
+            </article>
+            <article class="strength-card reveal">
+              <h3>Evidence over claims</h3>
+              <p>Every skill on this site traces to an artefact you can open — a data dictionary, a pipeline, a test suite, a board.</p>
+            </article>
+            <article class="strength-card reveal">
+              <h3>Build-aware analysis</h3>
+              <p>I write requirements as someone who has implemented them. Developers get specs they don't have to translate.</p>
+            </article>
+            <article class="strength-card reveal">
+              <h3>Three languages</h3>
+              <p>English, Vietnamese and Japanese — useful in stakeholder rooms, invaluable in messy requirement conversations.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== PROJECTS ============================== -->
+    <section class="section section--alt" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Featured work</p>
+          <h2 id="projects-title">Projects you can open, not just read about.</h2>
+          <p class="section-sub">Every case study ships with its working artefacts — requirements catalogues, data dictionaries, SQL pipelines, backlogs and repos. Filter by the kind of work you're hiring for.</p>
+        </header>
+
+        <div class="filter-bar reveal" role="group" aria-label="Filter projects by discipline">
+          <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">All work</button>
+          <button class="filter-chip" type="button" data-filter="ba" aria-pressed="false">Business analysis</button>
+          <button class="filter-chip" type="button" data-filter="data" aria-pressed="false">Data &amp; dashboards</button>
+          <button class="filter-chip" type="button" data-filter="build" aria-pressed="false">Full-stack delivery</button>
+          <button class="filter-chip" type="button" data-filter="ml" aria-pressed="false">Machine learning</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+
+          <article class="project-card project-card--featured reveal" data-cats="ba data build" tabindex="-1">
+            <div class="project-tags">
+              <span class="tag tag--accent">Flagship</span>
+              <span class="tag">Business analysis</span>
+              <span class="tag">Data &amp; BI</span>
+              <span class="tag">Full-stack</span>
+            </div>
+            <h3 class="project-title">WA Mining Portfolio</h3>
+            <p class="project-tagline">Raw CSV → governed, tested application.</p>
+            <p class="project-summary">A Western Australian government mining dataset — 421 sites across 356 projects — taken end-to-end: BA discovery, a 19-field data dictionary, a five-step SQL cleaning pipeline and a two-page Power BI dashboard, then rebuilt as a tested FastAPI + React application.</p>
+            <ul class="metric-chips" aria-label="Key numbers">
+              <li>421 sites</li><li>356 projects</li><li>3 sprints</li><li>41 issues</li>
+            </ul>
+            <div class="project-actions">
+              <button class="btn btn-text case-open" type="button" data-case="case-wa-mining">Read the case study
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+              </button>
+              <a class="icon-link" href="https://github.com/tonynguyen1292/WA_Mining" rel="noopener" aria-label="WA Mining repository on GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7 0-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .6 1.4.2 2.4.1 2.7.7.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2Z" fill="currentColor" stroke="none"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-cats="ba data" tabindex="-1">
+            <div class="project-tags">
+              <span class="tag">Business analysis</span>
+              <span class="tag">Data &amp; BI</span>
+            </div>
+            <h3 class="project-title">Mental Health Treatment Gap</h3>
+            <p class="project-tagline">BA discovery and governance, done properly.</p>
+            <p class="project-summary">A hybrid BA/data case study on Western Australia's mental-health treatment gap: full discovery plus a formal governance pack — business case, project charter, stakeholder and risk registers — then Sprint 1 delivered with two verified national datasets covering all 31 Primary Health Networks.</p>
+            <ul class="metric-chips" aria-label="Key numbers">
+              <li>73,132 records</li><li>31 PHNs</li><li>Sprint 1 of 5</li>
+            </ul>
+            <div class="project-actions">
+              <button class="btn btn-text case-open" type="button" data-case="case-healthcare">Read the case study
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+              </button>
+              <a class="icon-link" href="https://github.com/tonynguyen1292/Healthcare" rel="noopener" aria-label="Healthcare repository on GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7 0-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .6 1.4.2 2.4.1 2.7.7.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2Z" fill="currentColor" stroke="none"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-cats="ml build" tabindex="-1">
+            <div class="project-tags">
+              <span class="tag">Machine learning</span>
+              <span class="tag">Engineering</span>
+            </div>
+            <h3 class="project-title">Person Re-Identification</h3>
+            <p class="project-tagline">A PyTorch re-implementation, measured honestly.</p>
+            <p class="project-summary">PCB (Part-based Convolutional Baseline) for person re-identification, built as a modular training pipeline and evaluated on benchmark datasets — 92.9% Rank-1 and 78.5% mAP on Market1501, with the experimental setup documented so the numbers can be checked.</p>
+            <ul class="metric-chips" aria-label="Key numbers">
+              <li>92.87% Rank-1</li><li>78.54% mAP</li><li>Dockerised</li>
+            </ul>
+            <div class="project-actions">
+              <button class="btn btn-text case-open" type="button" data-case="case-reid">Read the case study
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+              </button>
+              <a class="icon-link" href="https://github.com/tonynguyen1292/Person-Retrieval" rel="noopener" aria-label="Person-Retrieval repository on GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7 0-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .6 1.4.2 2.4.1 2.7.7.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2Z" fill="currentColor" stroke="none"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <p class="projects-more reveal">Artefacts, commit history and READMEs live on <a href="https://github.com/tonynguyen1292" rel="noopener">github.com/tonynguyen1292</a>.</p>
+      </div>
+    </section>
+
+    <!-- ============================== SKILLS ============================== -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Capabilities</p>
+          <h2 id="skills-title">Skills, with receipts.</h2>
+          <p class="section-sub">Grouped by the job they do — open a group to see the tools and where each has actually been used.</p>
+        </header>
+
+        <div class="skills-list">
+          <div class="skill-group reveal">
+            <button class="skill-head" type="button" aria-expanded="true" aria-controls="sg-ba">
+              <span class="skill-name">Business analysis</span>
+              <span class="skill-desc">Turning intent into testable requirements</span>
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="skill-body" id="sg-ba">
+              <div class="skill-body-inner">
+                <ul class="chip-list">
+                  <li>Requirements elicitation</li><li>Stakeholder interviews &amp; workshops</li><li>User stories &amp; use cases</li><li>Gap analysis</li><li>BRD / FRD documentation</li><li>Acceptance criteria</li><li>UAT support</li>
+                </ul>
+                <p class="skill-proof"><strong>Receipts:</strong> ECBA (IIBA) · functional specs and test cases for an AI classifier at Spirited Thinking · the WA Mining requirements catalogue.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-group reveal">
+            <button class="skill-head" type="button" aria-expanded="false" aria-controls="sg-process">
+              <span class="skill-name">Process &amp; delivery</span>
+              <span class="skill-desc">Making work visible, traceable and finishable</span>
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="skill-body" id="sg-process">
+              <div class="skill-body-inner">
+                <ul class="chip-list">
+                  <li>BPMN AS-IS / TO-BE mapping</li><li>Agile &amp; Scrum</li><li>Sprint ceremonies</li><li>Backlog management</li><li>Jira &amp; Confluence</li><li>Requirements traceability</li>
+                </ul>
+                <p class="skill-proof"><strong>Receipts:</strong> a 41-issue Jira backlog (5 epics, 19 stories, 17 subtasks) delivered across 3 sprints · SDLC experience from both internships.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-group reveal">
+            <button class="skill-head" type="button" aria-expanded="false" aria-controls="sg-data">
+              <span class="skill-name">Data &amp; analytics</span>
+              <span class="skill-desc">From raw extract to numbers people trust</span>
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="skill-body" id="sg-data">
+              <div class="skill-body-inner">
+                <ul class="chip-list">
+                  <li>SQL</li><li>PostgreSQL</li><li>Power BI</li><li>DAX</li><li>Excel (lookups, pivots)</li><li>Data dictionaries</li><li>Data modelling</li><li>Data cleansing &amp; migration</li><li>Validation &amp; reconciliation</li>
+                </ul>
+                <p class="skill-proof"><strong>Receipts:</strong> a five-step SQL pipeline · a 19-field data dictionary · DAX measures that separate site counts from project counts.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-group reveal">
+            <button class="skill-head" type="button" aria-expanded="false" aria-controls="sg-eng">
+              <span class="skill-name">Engineering</span>
+              <span class="skill-desc">The ability to ship what I specify</span>
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="skill-body" id="sg-eng">
+              <div class="skill-body-inner">
+                <ul class="chip-list">
+                  <li>Python</li><li>FastAPI</li><li>React</li><li>TypeScript</li><li>REST APIs</li><li>Docker</li><li>Git &amp; GitHub Actions</li><li>Automated testing (pytest, Vitest)</li><li>PyTorch</li>
+                </ul>
+                <p class="skill-proof"><strong>Receipts:</strong> the WA Mining full-stack application with CI-enforced test suites · the PCB re-implementation.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-group reveal">
+            <button class="skill-head" type="button" aria-expanded="false" aria-controls="sg-comm">
+              <span class="skill-name">Communication</span>
+              <span class="skill-desc">Documentation and liaison across audiences</span>
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="skill-body" id="sg-comm">
+              <div class="skill-body-inner">
+                <ul class="chip-list">
+                  <li>Technical documentation for mixed audiences</li><li>Stakeholder liaison</li><li>Change &amp; UAT support</li><li>English</li><li>Vietnamese</li><li>Japanese</li>
+                </ul>
+                <p class="skill-proof"><strong>Receipts:</strong> client-facing elicitation at Spirited Thinking · UAT alongside functional consultants at FPT · this site.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== JOURNEY ============================== -->
+    <section class="section section--alt" id="journey" aria-labelledby="journey-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">The route here</p>
+          <h2 id="journey-title">A deliberate transition, not a drift.</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="tl-item reveal" data-kind="milestone">
+            <div class="tl-marker" aria-hidden="true"></div>
+            <div class="tl-content">
+              <div class="tl-meta"><span class="tl-date">2026</span><span class="tl-tag tl-tag--accent">Milestone</span></div>
+              <h3>ECBA certified · portfolio shipped</h3>
+              <p>Entry Certificate in Business Analysis issued by the IIBA (July 2026). WA Mining delivered end-to-end; the Healthcare case study through discovery, governance and Sprint 1.</p>
+              <button class="tl-more" type="button" aria-expanded="false">Details</button>
+              <div class="tl-detail">
+                <ul>
+                  <li>ECBA credential ID 188039608 — earned while running both portfolio projects.</li>
+                  <li>WA Mining: requirements → SQL pipeline → Power BI → tested FastAPI/React app, delivered through a 41-issue Jira backlog across 3 sprints.</li>
+                  <li>Healthcare: business case, project charter, stakeholder and risk registers; Sprint 1 ingested and verified 73,132 records across all 31 PHNs.</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="tl-item reveal" data-kind="development">
+            <div class="tl-marker" aria-hidden="true"></div>
+            <div class="tl-content">
+              <div class="tl-meta"><span class="tl-date">Nov 2025 — now</span><span class="tl-tag">Development</span></div>
+              <h3>ACS Professional Year in IT</h3>
+              <p>Australian workplace practice and professional communication, alongside the job search.</p>
+            </div>
+          </li>
+
+          <li class="tl-item reveal" data-kind="experience">
+            <div class="tl-marker" aria-hidden="true"></div>
+            <div class="tl-content">
+              <div class="tl-meta"><span class="tl-date">Jul — Nov 2024</span><span class="tl-tag">Experience</span></div>
+              <h3>Software Developer Intern · Spirited Thinking</h3>
+              <p>Access Labs Program, Perth. Requirements, functional specs and test cases for an AI image-classification project with client Botlab.</p>
+              <button class="tl-more" type="button" aria-expanded="false">Details</button>
+              <div class="tl-detail">
+                <ul>
+                  <li>Elicited requirements from Spirited Thinking and Botlab; analysed image datasets and documented functional specifications, test cases and success criteria.</li>
+                  <li>Acted as liaison across stakeholders, developers and data scientists, keeping technical delivery aligned with business objectives.</li>
+                  <li>Contributed to backlog refinement and defect triage — issues clearly described and traceable to requirements.</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="tl-item reveal" data-kind="education">
+            <div class="tl-marker" aria-hidden="true"></div>
+            <div class="tl-content">
+              <div class="tl-meta"><span class="tl-date">Feb 2023 — Feb 2025</span><span class="tl-tag">Education</span></div>
+              <h3>Master of Computer Science · Edith Cowan University</h3>
+              <p>Perth, WA · GPA 3.458 / 4.0 — systems analysis, database design, project management.</p>
+            </div>
+          </li>
+
+          <li class="tl-item reveal" data-kind="education">
+            <div class="tl-marker" aria-hidden="true"></div>
+            <div class="tl-content">
+              <div class="tl-meta"><span class="tl-date">Sep 2020 — Jun 2021</span><span class="tl-tag">Education</span></div>
+              <h3>Cybersecurity Diploma · NBCC</h3>
+              <p>Saint John, Canada · GPA 3.573 / 4.0 — systems administration, enterprise IT, IT governance.</p>
+            </div>
+          </li>
+
+          <li class="tl-item reveal" data-kind="experience">
+            <div class="tl-marker" aria-hidden="true"></div>
+            <div class="tl-content">
+              <div class="tl-meta"><span class="tl-date">May — Aug 2017</span><span class="tl-tag">Experience</span></div>
+              <h3>SAP Developer Intern · FPT Information Systems</h3>
+              <p>Ho Chi Minh City. ABAP reports that automated enterprise data workflows.</p>
+              <button class="tl-more" type="button" aria-expanded="false">Details</button>
+              <div class="tl-detail">
+                <ul>
+                  <li>Documented reporting and data-processing requirements through stakeholder meetings and analysis of existing SAP workflows.</li>
+                  <li>Designed and implemented ABAP reports automating extraction and transformation — less manual effort, faster operational reporting.</li>
+                  <li>Validated outputs against business rules with functional consultants and adjusted logic from user feedback.</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="tl-item reveal" data-kind="education">
+            <div class="tl-marker" aria-hidden="true"></div>
+            <div class="tl-content">
+              <div class="tl-meta"><span class="tl-date">Oct 2014 — Jan 2020</span><span class="tl-tag">Education</span></div>
+              <h3>Bachelor of Computer Science · University of Science, VNU-HCM</h3>
+              <p>Ho Chi Minh City · GPA 3.29 / 4.0 — software engineering, databases, analysis &amp; design.</p>
+            </div>
+          </li>
+        </ol>
+
+        <aside class="tl-aside reveal">
+          <p>The unglamorous chapters count too — hotel front desk in Ho Chi Minh City, warehouse coordination in Vancouver, a Perth kitchen through my Master's. Three countries of showing up, reading the room, and fixing processes nobody asked me to fix.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============================== CREDENTIALS ============================== -->
+    <section class="section" id="credentials" aria-labelledby="credentials-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Credibility</p>
+          <h2 id="credentials-title">Verify me.</h2>
+          <p class="section-sub">Certification, education and the toolkit — plus the two-page version for your ATS.</p>
+        </header>
+
+        <div class="cred-grid">
+          <article class="cred-card cred-card--cv reveal">
+            <h3>The two-page version</h3>
+            <p>ATS-friendly CV as PDF — the same story, formatted for screening software and busy readers.</p>
+            <a class="btn btn-primary" href="assets/Vy-Nguyen-CV-Business-Analyst.pdf" download>Download CV
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 19h16"/></svg>
+            </a>
+            <p class="cred-note">Updated July 2026</p>
+          </article>
+
+          <article class="cred-card reveal">
+            <p class="cred-kicker">Certification</p>
+            <h3>ECBA — Entry Certificate in Business Analysis</h3>
+            <p>International Institute of Business Analysis (IIBA) · issued July 2026</p>
+            <p class="cred-mono">Credential ID 188039608</p>
+          </article>
+
+          <article class="cred-card reveal">
+            <p class="cred-kicker">Professional development</p>
+            <h3>ACS Professional Year in IT</h3>
+            <p>Australian Computer Society · Nov 2025 — in progress</p>
+            <h3 class="cred-stack">Step into SQL with Jupyter Notebooks</h3>
+            <p>Coursera · issued May 2026</p>
+          </article>
+
+          <article class="cred-card reveal">
+            <p class="cred-kicker">Education</p>
+            <ul class="cred-edu">
+              <li><strong>Master of Computer Science</strong><span>Edith Cowan University · 2025 · GPA 3.458</span></li>
+              <li><strong>Cybersecurity Diploma</strong><span>NBCC, Canada · 2021 · GPA 3.573</span></li>
+              <li><strong>Bachelor of Computer Science</strong><span>University of Science, VNU-HCM · 2020</span></li>
+            </ul>
+          </article>
+
+          <article class="cred-card cred-card--wide reveal">
+            <p class="cred-kicker">Day-to-day toolkit</p>
+            <div class="toolkit">
+              <div class="toolkit-group"><span class="toolkit-label">Analysis &amp; delivery</span><ul class="chip-list"><li>Jira</li><li>Confluence</li><li>Notion</li><li>BPMN tooling</li></ul></div>
+              <div class="toolkit-group"><span class="toolkit-label">Data</span><ul class="chip-list"><li>PostgreSQL</li><li>Power BI</li><li>Excel</li><li>Jupyter</li></ul></div>
+              <div class="toolkit-group"><span class="toolkit-label">Build</span><ul class="chip-list"><li>VS Code</li><li>Git &amp; GitHub</li><li>Docker</li><li>GitHub Actions</li></ul></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CONTACT ============================== -->
+    <section class="section section--alt section--last" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-copy">
+            <header class="section-head reveal">
+              <p class="eyebrow">Contact</p>
+              <h2 id="contact-title">Hiring an analyst who ships?</h2>
+              <p class="section-sub">I'm in Perth, available now, and happy to walk through any artefact on this page — the data dictionary, the backlog, the pipeline, all of it.</p>
+            </header>
+
+            <div class="contact-channels reveal">
+              <div class="email-row">
+                <a class="email-link" href="mailto:tonynguyen1996.jb@gmail.com">tonynguyen1996.jb@gmail.com</a>
+                <button class="btn btn-outline btn-small" id="copy-email" type="button" data-email="tonynguyen1996.jb@gmail.com">Copy</button>
+              </div>
+              <div class="contact-links">
+                <a class="btn btn-ghost" href="https://www.linkedin.com/in/vynguyen1996/" rel="noopener">LinkedIn
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7m0 0H9m8 0v8"/></svg>
+                </a>
+                <a class="btn btn-ghost" href="https://github.com/tonynguyen1292" rel="noopener">GitHub
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7m0 0H9m8 0v8"/></svg>
+                </a>
+              </div>
+              <p class="contact-meta">Based in Perth, WA · replies within one business day</p>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" name="contact" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field" id="contact-form">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="visually-hidden" aria-hidden="true">
+              <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+            </p>
+            <div class="form-field">
+              <label for="cf-name">Name</label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="form-field">
+              <label for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="form-field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" required placeholder="A role, a question, or just 'let's talk'…"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Send message
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+            </button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="14" class="brand-bg"/>
+          <rect x="13" y="34" width="10" height="17" rx="3" class="brand-bar"/>
+          <rect x="27" y="24" width="10" height="27" rx="3" class="brand-bar"/>
+          <rect x="41" y="13" width="10" height="38" rx="3" class="brand-bar"/>
+        </svg>
+        <div>
+          <p class="footer-name">Duc Vy (Vy) Nguyen</p>
+          <p class="footer-tag">Hand-built with semantic HTML, modern CSS and vanilla JavaScript — no frameworks, no trackers.</p>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#journey">Journey</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-end">
+        <p>© 2026 Duc Vy Nguyen · Perth, Western Australia</p>
+        <button class="to-top" id="to-top" type="button" aria-label="Back to top">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5m0 0-6 6m6-6 6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================== CASE STUDY DIALOG ============================== -->
+  <dialog class="case-dialog" id="case-dialog" aria-labelledby="case-dialog-title">
+    <div class="case-dialog-frame">
+      <button class="case-close" id="case-close" type="button" aria-label="Close case study">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+      <div class="case-content" id="case-content"><!-- populated from <template> --></div>
+    </div>
+  </dialog>
+
+  <template id="case-wa-mining">
+    <article class="case">
+      <p class="eyebrow">Case study · flagship</p>
+      <h2 id="case-dialog-title">WA Mining Portfolio — from raw CSV to governed application</h2>
+      <ul class="metric-chips"><li>421 sites</li><li>356 projects</li><li>19-field dictionary</li><li>41 issues · 3 sprints</li></ul>
+
+      <h3>The problem</h3>
+      <p>Stakeholders monitoring Western Australia's resources portfolio relied on static reports. Nobody could quickly answer "how many active sites per region?" — and naive counting double-counted sites against projects, because multiple sites can belong to a single project code.</p>
+
+      <h3>My role</h3>
+      <p>Everything — deliberately. Business analyst, then data analyst, then developer, run as three phases with proper handovers. Each artefact had to actually work for the next phase, which is the honest test of whether analysis is any good.</p>
+
+      <h3>What I did</h3>
+      <ul class="case-list">
+        <li>Produced a <strong>requirements catalogue</strong> and a <strong>19-field data dictionary</strong> defining a site-level data model (SITE_CODE as primary key) and the many-sites-to-one-project relationship.</li>
+        <li>Mapped <strong>AS-IS / TO-BE processes in BPMN</strong> and documented the data-cleansing business rules — such as standardising region and LGA naming — that carried through to the delivered solution.</li>
+        <li>Built a <strong>five-step SQL/PostgreSQL pipeline</strong> resolving inconsistent labels, overlapping status encodings and site-vs-project double counting. It runs for real: one exported clean dataset feeds every downstream consumer, instead of two hand-maintained implementations of the same rules.</li>
+        <li>Developed a <strong>two-page Power BI dashboard</strong> with DAX measures (DISTINCTCOUNT vs COUNTROWS) separating project counts from site counts, with slicers for commodity, region, stage and company.</li>
+        <li>Rebuilt the model as a <strong>FastAPI + PostgreSQL REST API</strong> (with CSV export) and a <strong>React/TypeScript front end</strong> — drill-down breakdown charts, a top-10 LGA view, a sortable sites explorer with shareable URLs, an interactive map, and a global command palette (Ctrl/Cmd + K).</li>
+        <li>Set up <strong>Docker Compose</strong> dev/prod parity behind nginx and <strong>GitHub Actions CI</strong> running backend (pytest) and frontend (Vitest + typecheck + build) suites, so every merge to main is verified. Delivery tracked through a <strong>41-issue Jira backlog</strong> — 5 epics, 19 stories, 17 subtasks — across 3 sprints.</li>
+      </ul>
+
+      <h3>Tools</h3>
+      <ul class="chip-list"><li>SQL</li><li>PostgreSQL</li><li>Power BI</li><li>DAX</li><li>Python</li><li>FastAPI</li><li>React</li><li>TypeScript</li><li>Docker</li><li>GitHub Actions</li><li>Jira</li></ul>
+
+      <h3>The outcome</h3>
+      <p>One clean dataset every consumer trusts, a dashboard that answers the portfolio questions in two clicks, and a tested application proving the requirements were buildable. The BA artefacts weren't paperwork — they were the spec the software was verified against.</p>
+
+      <div class="case-links">
+        <a class="btn btn-primary" href="https://github.com/tonynguyen1292/WA_Mining" rel="noopener">View repository
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7m0 0H9m8 0v8"/></svg>
+        </a>
+        <!-- Jira backlog link removed: the board requires login for anonymous visitors.
+             If you make WMDP2 publicly viewable in Jira, re-add:
+             <a class="btn btn-ghost" href="https://tonynguyen1996jb.atlassian.net/jira/software/projects/WMDP2" rel="noopener">Jira backlog</a> -->
+      </div>
+    </article>
+  </template>
+
+  <template id="case-healthcare">
+    <article class="case">
+      <p class="eyebrow">Case study</p>
+      <h2 id="case-dialog-title">Mental Health Treatment Gap — discovery and governance for WA</h2>
+      <ul class="metric-chips"><li>24,865 + 48,267 records</li><li>31 PHNs</li><li>Sprint 1 of 5</li></ul>
+
+      <h3>The problem</h3>
+      <p>Western Australia's mental-health access problem — financial barriers, rural inequity, systemic access failures — is widely discussed but loosely quantified. Before analysing anything, the project needed what real projects need first: a scope, a case, and governance.</p>
+
+      <h3>My role</h3>
+      <p>Business analyst leading discovery and initiation, then data analyst for the first delivery sprint.</p>
+
+      <h3>What I did</h3>
+      <ul class="case-list">
+        <li>Ran <strong>full BA discovery</strong>: problem statement, scope and assumptions, stakeholder analysis, business requirements and AS-IS process documentation.</li>
+        <li>Authored a <strong>formal initiation and governance pack</strong> — business case, project charter, stakeholder and risk registers — authorising a five-sprint Agile delivery plan.</li>
+        <li>Delivered <strong>Sprint 1 (data ingestion)</strong>: sourced, ingested and verified two national mental-health datasets from ABS and AIHW — 24,865 and 48,267 records — covering all 31 Australian Primary Health Networks.</li>
+        <li>Kept <strong>scope honest</strong>: reporting layers stay out of scope until the business case authorises them. Discipline over decoration.</li>
+      </ul>
+
+      <h3>Tools</h3>
+      <ul class="chip-list"><li>Business case</li><li>Project charter</li><li>Stakeholder &amp; risk registers</li><li>Python / Jupyter</li><li>Excel</li></ul>
+
+      <h3>The outcome</h3>
+      <p>A defensible foundation: authorised scope, verified data and a delivery plan — so the analysis phases proceed on governed footing rather than ad-hoc exploration.</p>
+
+      <div class="case-links">
+        <a class="btn btn-primary" href="https://github.com/tonynguyen1292/Healthcare" rel="noopener">View repository
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7m0 0H9m8 0v8"/></svg>
+        </a>
+      </div>
+    </article>
+  </template>
+
+  <template id="case-reid">
+    <article class="case">
+      <p class="eyebrow">Case study</p>
+      <h2 id="case-dialog-title">Person Re-Identification — a PyTorch re-implementation, measured honestly</h2>
+      <ul class="metric-chips"><li>92.87% Rank-1</li><li>78.54% mAP</li><li>Market1501</li></ul>
+
+      <h3>The problem</h3>
+      <p>Re-implement a published person re-identification architecture — PCB, Part-based Convolutional Baseline — and evaluate it credibly against benchmark results, rather than "it seems to work".</p>
+
+      <h3>My role</h3>
+      <p>Sole engineer: architecture, training pipeline, evaluation and documentation.</p>
+
+      <h3>What I did</h3>
+      <ul class="case-list">
+        <li>Structured a <strong>modular codebase</strong> separating data loading, model architecture, training logic and evaluation.</li>
+        <li>Trained and evaluated on <strong>benchmark ReID datasets</strong>, tracking experiments with TensorBoard.</li>
+        <li><strong>Dockerised the training pipeline</strong> for reproducible runs.</li>
+        <li>Documented the experimental setup and results in a structured README — so the numbers can be checked, not taken on faith.</li>
+      </ul>
+
+      <h3>Tools</h3>
+      <ul class="chip-list"><li>Python</li><li>PyTorch</li><li>TensorBoard</li><li>Docker</li><li>Git</li></ul>
+
+      <h3>The outcome</h3>
+      <p>92.87% Rank-1 and 78.54% mAP on Market1501 — in line with the published baseline, with a reproducible setup. Proof I can operate on the technical end of the data conversation.</p>
+
+      <div class="case-links">
+        <a class="btn btn-primary" href="https://github.com/tonynguyen1292/Person-Retrieval" rel="noopener">View repository
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7m0 0H9m8 0v8"/></svg>
+        </a>
+      </div>
+    </article>
+  </template>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

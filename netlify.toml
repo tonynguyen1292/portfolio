@@ -1,0 +1,14 @@
+# Netlify configuration — static site, no build step.
+# Netlify's default caching (ETag + must-revalidate) is correct for
+# un-fingerprinted files, so we only add security headers here.
+
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"

@@ -1,0 +1,11 @@
+# OS noise
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+
+# Netlify local folder (created if you ever run `netlify dev`)
+.netlify/

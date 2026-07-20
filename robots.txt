@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO-DOMAIN: update after deployment (see README "Go live" step 4)
+Sitemap: https://vynguyen-portfolio.netlify.app/sitemap.xml
