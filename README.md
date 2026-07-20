@@ -69,9 +69,11 @@ Free tier: 100 submissions/month — plenty.
 
 ### Go live checklist (after first deploy)
 
-> The site is live at **https://vynguyen-perth.netlify.app** (deployed 20 Jul 2026 via
-> `netlify deploy --prod`; the folder is linked to project `vynguyen-perth`, so future
-> deploys are just `npx netlify-cli deploy --prod --dir .`).
+> The site is live at **https://vynguyen-perth.netlify.app**, and continuous deployment
+> is connected (20 Jul 2026): the repo is **github.com/tonynguyen1292/portfolio**, linked
+> to the Netlify project via deploy key + webhook. **Every `git push` to `main` deploys
+> automatically** — `npx netlify-cli deploy --prod --dir .` remains available as a manual
+> fallback.
 
 1. **Domain URLs** — already set to `vynguyen-perth.netlify.app` in `index.html`
    (canonical/OG/JSON-LD), `robots.txt` and `sitemap.xml`. If you attach a custom
