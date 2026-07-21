@@ -79,14 +79,18 @@
       if (e.key === 'Escape' && navMenu.classList.contains('is-open')) { setMenu(false); burger.focus(); }
     });
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 860) setMenu(false);
+      if (window.innerWidth > 1020) setMenu(false);
     });
   }
 
   /* ------------------------------ SCROLLSPY ------------------------------ */
   const navLinks = $$('.nav-link');
   const spyTargets = navLinks
-    .map((link) => $(link.getAttribute('href')))
+    .map((link) => {
+      const href = link.getAttribute('href') || '';
+      /* only same-page anchors participate in scrollspy — page links like /ielts don't */
+      return href.startsWith('#') && href.length > 1 ? $(href) : null;
+    })
     .filter(Boolean);
 
   if ('IntersectionObserver' in window && spyTargets.length) {

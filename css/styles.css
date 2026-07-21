@@ -393,7 +393,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 16px); }
 .nav-burger[aria-expanded="true"] span:first-child { top: 19px; transform: rotate(45deg); }
 .nav-burger[aria-expanded="true"] span:last-child { top: 19px; transform: rotate(-45deg); }
 
-@media (max-width: 860px) {
+@media (max-width: 1020px) {
   .nav-burger { display: block; }
   .nav-links {
     position: fixed;
