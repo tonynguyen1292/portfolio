@@ -1,6 +1,6 @@
 # Vy Nguyen — Portfolio Website
 
-A single-page portfolio positioning Vy for Business Analyst / Data Analyst roles in Perth.
+A portfolio positioning Vy for **Software Engineer / ICT Business Analyst** roles in Perth.
 Hand-built static site: **semantic HTML + modern CSS + vanilla JavaScript**. No frameworks,
 no build step, no trackers — open `index.html` and it works; push to Netlify and it's live.
 
@@ -8,12 +8,16 @@ no build step, no trackers — open `index.html` and it works; push to Netlify a
 
 ```
 Portfolio Website/
-├── index.html          ← all content lives here (edit this 95% of the time)
+├── index.html          ← main page content (edit this 95% of the time)
+├── ielts.html          ← unlisted IELTS-journey page (/ielts) — noindex until targets land
 ├── thanks.html         ← contact-form success page
 ├── css/styles.css      ← design system (tokens at the top control everything)
 ├── js/main.js          ← interactions (theme, filters, dialog, counters…)
+├── js/ielts-data.js    ← IELTS scores/mocks — append one record per practice test
+├── js/ielts.js         ← IELTS page renderer (charts, gap bars, log)
 ├── assets/
-│   ├── Vy-Nguyen-CV-Business-Analyst.pdf   ← the CV the download buttons serve
+│   ├── Vy-Nguyen-CV-Software-Engineer.pdf  ← CV #1 (nav + hero buttons)
+│   ├── Vy-Nguyen-CV-Business-Analyst.pdf   ← CV #2 (credentials card)
 │   ├── og-image.png    ← social-share preview image (LinkedIn/Teams)
 │   ├── favicon.svg / favicon-32.png / apple-touch-icon.png
 ├── netlify.toml        ← security headers + publish config
@@ -104,8 +108,10 @@ Free tier: 100 submissions/month — plenty.
 | Skills groups | `<!-- SKILLS -->` |
 | Timeline entries | `<!-- JOURNEY -->` |
 | Certifications / education | `<!-- CREDENTIALS -->` |
+| Log an IELTS mock test | append one record to `mocks` in `js/ielts-data.js` — charts redraw themselves |
+| Publish the IELTS page properly | remove the `noindex` meta in `ielts.html`, link it where you want |
 | Colours / fonts / spacing | `css/styles.css` → `:root` token blocks at the top |
-| Replace the CV | overwrite `assets/Vy-Nguyen-CV-Business-Analyst.pdf` (keep the same filename) |
+| Replace a CV | overwrite the matching PDF in `assets/` (keep the same filename) |
 
 After editing: `git add -A ; git commit -m "update content" ; git push` — Netlify redeploys in ~20 seconds.
 

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en-AU" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>The IELTS Project — Vy Nguyen</title>
+  <meta name="description" content="An engineer instruments his own English: official IELTS Academic baseline, per-skill targets, error taxonomy and timed-mock tracking.">
+  <!-- Unlisted for now: not in the site nav, not indexed. Remove this tag when the target bands land. -->
+  <meta name="robots" content="noindex">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    (function () {
+      document.documentElement.classList.add('js');
+      try {
+        var saved = localStorage.getItem('vn-theme');
+        var dark = saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+      } catch (e) { /* default stays light */ }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="/" aria-label="Vy Nguyen — back to the portfolio">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="14" class="brand-bg"/>
+          <rect x="13" y="34" width="10" height="17" rx="3" class="brand-bar"/>
+          <rect x="27" y="24" width="10" height="27" rx="3" class="brand-bar"/>
+          <rect x="41" y="13" width="10" height="38" rx="3" class="brand-bar"/>
+        </svg>
+        <span class="brand-name">Vy Nguyen</span>
+      </a>
+      <div class="nav-actions">
+        <a class="btn btn-outline btn-small ielts-back" href="/">← Portfolio</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.4 14.2A8.5 8.5 0 0 1 9.8 3.6a8.5 8.5 0 1 0 10.6 10.6Z"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================== BASELINE ============================== -->
+    <section class="section" aria-labelledby="ielts-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">A personal analytics side-quest · IELTS Academic</p>
+          <h1 id="ielts-title">Instrumenting my own English.</h1>
+          <p class="section-sub">I treat everything like a project — including this. Official baseline: the input channels are excellent. The output channels are the engineering work. This page tracks that work with real numbers, because that's how I'd run it for a client.</p>
+        </header>
+
+        <dl class="band-tiles reveal">
+          <div class="band-tile band-tile--hi">
+            <dt class="band-tile-skill">Reading</dt>
+            <dd class="band-tile-score">9.0</dd>
+            <dd class="band-tile-note">the ceiling — there is no 9.5</dd>
+          </div>
+          <div class="band-tile">
+            <dt class="band-tile-skill">Listening</dt>
+            <dd class="band-tile-score">8.5</dd>
+            <dd class="band-tile-note">comfortably above target</dd>
+          </div>
+          <div class="band-tile">
+            <dt class="band-tile-skill">Writing</dt>
+            <dd class="band-tile-score">6.5</dd>
+            <dd class="band-tile-note">the project · target 7.0</dd>
+          </div>
+          <div class="band-tile">
+            <dt class="band-tile-skill">Speaking</dt>
+            <dd class="band-tile-score">6.5</dd>
+            <dd class="band-tile-note">the project · target 7.0</dd>
+          </div>
+          <div class="band-tile band-tile--overall">
+            <dt class="band-tile-skill">Overall</dt>
+            <dd class="band-tile-score" id="overall-band">7.5</dd>
+            <dd class="band-tile-note">official · Academic</dd>
+          </div>
+        </dl>
+
+        <p class="band-math reveal">How IELTS computes the overall band: (9.0 + 8.5 + 6.5 + 6.5) ÷ 4 = <strong>7.625</strong>, rounded to the nearest half band → <strong>7.5</strong>. Quarter fractions round upward, so 7.75 would have been an 8.0. Read the scoring rules before you optimise — <em>requirements first</em>, always.</p>
+      </div>
+    </section>
+
+    <!-- ============================== THE GAP ============================== -->
+    <section class="section section--alt" aria-labelledby="gap-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Gap analysis</p>
+          <h2 id="gap-title">The gap, quantified.</h2>
+          <p class="section-sub">Working target: 7.0 in every band. Reading and Listening already clear it. Writing and Speaking sit half a band short — and a half band is a project, not a wish. The tick marks the target.</p>
+        </header>
+        <div class="gap-list reveal" id="gap-list"><!-- rendered from js/ielts-data.js --></div>
+      </div>
+    </section>
+
+    <!-- ============================== PROGRESS ============================== -->
+    <section class="section" aria-labelledby="progress-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Telemetry</p>
+          <h2 id="progress-title">Progress, plotted.</h2>
+          <p class="section-sub">One data point so far — the official test. Every timed mock from here on lands in <span class="cred-mono" style="font-size:0.78rem">js/ielts-data.js</span> as one record, and these charts redraw themselves. No dashboard tool, no export step — the site is the dashboard.</p>
+        </header>
+        <div class="bandcharts" id="bandcharts"><!-- small multiples rendered per skill --></div>
+      </div>
+    </section>
+
+    <!-- ============================== METHOD ============================== -->
+    <section class="section section--alt" aria-labelledby="method-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">The operating rhythm</p>
+          <h2 id="method-title">Run like a delivery, not a grind.</h2>
+          <p class="section-sub">Writing and Speaking don't improve by "more practice" — they improve by scoring against the public band descriptors, finding the two categories that cost the most, and fixing those first.</p>
+        </header>
+
+        <div class="about-cards" style="max-width:820px">
+          <article class="strength-card reveal">
+            <h3>Error journal</h3>
+            <p>Every lost mark gets a category — T/F/NG trap, paraphrase miss, spelling, distractor reversal. The Pareto below finds the 20% causing 80% of the damage.</p>
+          </article>
+          <article class="strength-card reveal">
+            <h3>Criterion scoring</h3>
+            <p>Writing and Speaking are marked on four public criteria each. Mocks get self-scored per criterion — because "6.5 overall" hides exactly which lever to pull.</p>
+          </article>
+          <article class="strength-card reveal">
+            <h3>Recorded speaking</h3>
+            <p>Part 2 answers recorded and reviewed against the descriptors — plus shadowing for rhythm and linking. Painful to listen to; unreasonably effective.</p>
+          </article>
+          <article class="strength-card reveal">
+            <h3>One fix per session</h3>
+            <p>Each mock ends with a single carried-forward action. A retro that produces twelve actions produces zero.</p>
+          </article>
+        </div>
+
+        <div style="height:1.5rem"></div>
+
+        <div id="pareto-block">
+          <div class="empty-note reveal" id="pareto-empty">
+            <strong>Error Pareto — waiting on data.</strong> Once the first mock's error journal is logged, this panel charts which categories are actually losing marks, worst first.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== LOG ============================== -->
+    <section class="section" aria-labelledby="log-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">The log</p>
+          <h2 id="log-title">Every attempt, on the record.</h2>
+        </header>
+
+        <ol class="timeline" id="ielts-log">
+          <li class="tl-item reveal" data-kind="milestone">
+            <div class="tl-marker" aria-hidden="true"></div>
+            <div class="tl-content">
+              <div class="tl-meta"><span class="tl-date">2026</span><span class="tl-tag tl-tag--accent">Official</span></div>
+              <h3>IELTS Academic — the baseline</h3>
+              <p>Listening 8.5 · Reading 9.0 · Writing 6.5 · Speaking 6.5 — overall 7.5. Reading maxed out; Writing and Speaking scoped as the improvement project.</p>
+            </div>
+          </li>
+        </ol>
+
+        <aside class="tl-aside reveal">
+          <p>Why publish this at all? Because "strong communicator" is a claim, and claims are cheap. A Reading 9.0 is evidence. So is being honest about the 6.5s — and showing, in data, what I'm doing about them. That's the same standard the rest of <a href="/">the portfolio</a> holds itself to.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="14" class="brand-bg"/>
+          <rect x="13" y="34" width="10" height="17" rx="3" class="brand-bar"/>
+          <rect x="27" y="24" width="10" height="27" rx="3" class="brand-bar"/>
+          <rect x="41" y="13" width="10" height="38" rx="3" class="brand-bar"/>
+        </svg>
+        <div>
+          <p class="footer-name">Duc Vy (Vy) Nguyen</p>
+          <p class="footer-tag">The IELTS project — tracked like everything else I ship.</p>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/">Portfolio</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+      <div class="footer-end">
+        <p>© 2026 Duc Vy Nguyen · Perth, Western Australia</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/ielts-data.js" defer></script>
+  <script src="js/ielts.js" defer></script>
+</body>
+</html>

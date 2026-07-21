@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Vy Nguyen — Business Analyst &amp; Data Analyst | Perth, WA</title>
-  <meta name="description" content="ECBA-certified ICT Business Analyst &amp; and Software Engineer in Perth with a Master of Computer Science. I take messy datasets from requirements and process maps to SQL pipelines, Power BI dashboards and tested full-stack applications.">
+  <title>Vy Nguyen — Software Engineer &amp; ICT Business Analyst | Perth, WA</title>
+  <meta name="description" content="Perth software engineer and ICT business analyst (ECBA, Master of Computer Science). I take products from elicited requirements to tested FastAPI + React applications — with SQL and Power BI when the data needs to talk.">
   <meta name="author" content="Duc Vy Nguyen">
 
   <!-- Live domain. If you attach a custom domain later, update every URL below. -->
@@ -124,7 +124,7 @@
         <div class="hero-copy">
           <p class="eyebrow reveal">Perth, Western Australia · software engineer &amp; ICT business analyst</p>
           <h1 class="hero-title reveal">I write the spec. Then I <em class="hero-em">ship it</em>.</h1>
-          <p class="hero-lede reveal">I'm Vy Nguyen — a software engineer with a Master of Computer Science and an unusual second credential: the ECBA in business analysis. I build full-stack data products — FastAPI, React, PostgreSQL — from requirements I've elicited myself, verified by the test suites CI runs on every merge.</p>
+          <p class="hero-lede reveal">I'm Vy Nguyen — a software engineer with a Master of Computer Science and a business analyst's credential (the ECBA). Most teams need two people for what I do: one to work out what the business actually needs, and one to build it properly. I'm both. The proof: a full-stack data platform — FastAPI, React, PostgreSQL — shipped solo, with tests running on every change.</p>
 
           <div class="pipeline reveal" role="group" aria-label="How every project here travels: question, requirements, build, verify, ship. Select a step for detail.">
             <div class="pipe-steps" id="pipeline">
@@ -265,14 +265,14 @@ def list_sites(region: str | None,
         <header class="section-head reveal">
           <p class="eyebrow">Featured work</p>
           <h2 id="projects-title">Projects you can open, not just read about.</h2>
-          <p class="section-sub">Every case study ships with its working artefacts — requirements catalogues, data dictionaries, SQL pipelines, backlogs and repos. Filter by the kind of work you're hiring for.</p>
+          <p class="section-sub">Every case study ships with its working parts — the code, the requirements, the pipelines, the backlog. Filter by the kind of work you're hiring for.</p>
         </header>
 
         <div class="filter-bar reveal" role="group" aria-label="Filter projects by discipline">
           <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">All work</button>
+          <button class="filter-chip" type="button" data-filter="build" aria-pressed="false">Full-stack delivery</button>
           <button class="filter-chip" type="button" data-filter="ba" aria-pressed="false">Business analysis</button>
           <button class="filter-chip" type="button" data-filter="data" aria-pressed="false">Data &amp; dashboards</button>
-          <button class="filter-chip" type="button" data-filter="build" aria-pressed="false">Full-stack delivery</button>
           <button class="filter-chip" type="button" data-filter="ml" aria-pressed="false">Machine learning</button>
         </div>
 
@@ -281,13 +281,13 @@ def list_sites(region: str | None,
           <article class="project-card project-card--featured reveal" data-cats="ba data build" tabindex="-1">
             <div class="project-tags">
               <span class="tag tag--accent">Flagship</span>
+              <span class="tag">Full-stack</span>
               <span class="tag">Business analysis</span>
               <span class="tag">Data &amp; BI</span>
-              <span class="tag">Full-stack</span>
             </div>
             <h3 class="project-title">WA Mining Portfolio</h3>
             <p class="project-tagline">Raw CSV → governed, tested application.</p>
-            <p class="project-summary">A Western Australian government mining dataset — 421 sites across 356 projects — taken end-to-end: BA discovery, a 19-field data dictionary, a five-step SQL cleaning pipeline and a two-page Power BI dashboard, then rebuilt as a tested FastAPI + React application.</p>
+            <p class="project-summary">A Western Australian government mining dataset — 421 sites across 356 projects — shipped as a tested FastAPI + React application with Docker and CI, and built on real BA discovery: a requirements catalogue, a 19-field data dictionary, a five-step SQL pipeline and a two-page Power BI dashboard.</p>
             <ul class="metric-chips" aria-label="Key numbers">
               <li>421 sites</li><li>356 projects</li><li>3 sprints</li><li>41 issues</li>
             </ul>
@@ -359,7 +359,23 @@ def list_sites(region: str | None,
 
         <div class="skills-list">
           <div class="skill-group reveal">
-            <button class="skill-head" type="button" aria-expanded="true" aria-controls="sg-ba">
+            <button class="skill-head" type="button" aria-expanded="true" aria-controls="sg-eng">
+              <span class="skill-name">Engineering</span>
+              <span class="skill-desc">The ability to ship what I specify</span>
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="skill-body" id="sg-eng">
+              <div class="skill-body-inner">
+                <ul class="chip-list">
+                  <li>Python</li><li>FastAPI</li><li>React</li><li>TypeScript</li><li>REST APIs</li><li>Docker</li><li>Git &amp; GitHub Actions</li><li>Automated testing (pytest, Vitest)</li><li>PyTorch</li>
+                </ul>
+                <p class="skill-proof"><strong>Receipts:</strong> the WA Mining full-stack application with CI-enforced test suites · the PCB re-implementation.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-group reveal">
+            <button class="skill-head" type="button" aria-expanded="false" aria-controls="sg-ba">
               <span class="skill-name">Business analysis</span>
               <span class="skill-desc">Turning intent into testable requirements</span>
               <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
@@ -407,22 +423,6 @@ def list_sites(region: str | None,
           </div>
 
           <div class="skill-group reveal">
-            <button class="skill-head" type="button" aria-expanded="false" aria-controls="sg-eng">
-              <span class="skill-name">Engineering</span>
-              <span class="skill-desc">The ability to ship what I specify</span>
-              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
-            </button>
-            <div class="skill-body" id="sg-eng">
-              <div class="skill-body-inner">
-                <ul class="chip-list">
-                  <li>Python</li><li>FastAPI</li><li>React</li><li>TypeScript</li><li>REST APIs</li><li>Docker</li><li>Git &amp; GitHub Actions</li><li>Automated testing (pytest, Vitest)</li><li>PyTorch</li>
-                </ul>
-                <p class="skill-proof"><strong>Receipts:</strong> the WA Mining full-stack application with CI-enforced test suites · the PCB re-implementation.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="skill-group reveal">
             <button class="skill-head" type="button" aria-expanded="false" aria-controls="sg-comm">
               <span class="skill-name">Communication</span>
               <span class="skill-desc">Documentation and liaison across audiences</span>
@@ -454,8 +454,8 @@ def list_sites(region: str | None,
             <div class="tl-marker" aria-hidden="true"></div>
             <div class="tl-content">
               <div class="tl-meta"><span class="tl-date">2026</span><span class="tl-tag tl-tag--accent">Milestone</span></div>
-              <h3>ECBA certified · portfolio shipped</h3>
-              <p>Entry Certificate in Business Analysis issued by the IIBA (July 2026). WA Mining delivered end-to-end; the Healthcare case study through discovery, governance and Sprint 1.</p>
+              <h3>ECBA certified · full-stack portfolio shipped</h3>
+              <p>Entry Certificate in Business Analysis issued by the IIBA (July 2026). WA Mining shipped end-to-end as a tested FastAPI + React application; the Healthcare case study through discovery, governance and Sprint 1.</p>
               <button class="tl-more" type="button" aria-expanded="false">Details</button>
               <div class="tl-detail">
                 <ul>
@@ -480,7 +480,7 @@ def list_sites(region: str | None,
             <div class="tl-marker" aria-hidden="true"></div>
             <div class="tl-content">
               <div class="tl-meta"><span class="tl-date">Jul — Nov 2024</span><span class="tl-tag">Experience</span></div>
-              <h3>Software Developer Intern · Spirited Thinking</h3>
+              <h3>Software Developer &amp; BA Intern · Spirited Thinking</h3>
               <p>Access Labs Program, Perth. Requirements, functional specs and test cases for an AI image-classification project with client Botlab.</p>
               <button class="tl-more" type="button" aria-expanded="false">Details</button>
               <div class="tl-detail">
@@ -515,7 +515,7 @@ def list_sites(region: str | None,
             <div class="tl-marker" aria-hidden="true"></div>
             <div class="tl-content">
               <div class="tl-meta"><span class="tl-date">May — Aug 2017</span><span class="tl-tag">Experience</span></div>
-              <h3>SAP Developer Intern · FPT Information Systems</h3>
+              <h3>SAP Developer &amp; BA Intern · FPT Information Systems</h3>
               <p>Ho Chi Minh City. ABAP reports that automated enterprise data workflows.</p>
               <button class="tl-more" type="button" aria-expanded="false">Details</button>
               <div class="tl-detail">
@@ -550,16 +550,21 @@ def list_sites(region: str | None,
         <header class="section-head reveal">
           <p class="eyebrow">Credibility</p>
           <h2 id="credentials-title">Verify me.</h2>
-          <p class="section-sub">Certification, education and the toolkit — plus the two-page version for your ATS.</p>
+          <p class="section-sub">Certification, education and the toolkit — plus CVs tuned for the role you're filling.</p>
         </header>
 
         <div class="cred-grid">
           <article class="cred-card cred-card--cv reveal">
             <h3>The CV, in PDF</h3>
-            <p>ATS-friendly and screening-software safe — the same story, formatted for busy readers.</p>
-            <a class="btn btn-primary" href="assets/Vy-Nguyen-CV-Software-Engineer.pdf" download>Download CV
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 19h16"/></svg>
-            </a>
+            <p>Two flavours of the same person — pick the emphasis your role needs. Both ATS-safe.</p>
+            <div class="cv-buttons">
+              <a class="btn btn-primary" href="assets/Vy-Nguyen-CV-Software-Engineer.pdf" download>Software Engineer CV
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 19h16"/></svg>
+              </a>
+              <a class="btn btn-ghost" href="assets/Vy-Nguyen-CV-Business-Analyst.pdf" download>ICT Business Analyst CV
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 19h16"/></svg>
+              </a>
+            </div>
             <p class="cred-note">Updated July 2026</p>
           </article>
 
@@ -606,8 +611,8 @@ def list_sites(region: str | None,
           <div class="contact-copy">
             <header class="section-head reveal">
               <p class="eyebrow">Contact</p>
-              <h2 id="contact-title">Hiring an analyst who ships?</h2>
-              <p class="section-sub">I'm in Perth, available now, and happy to walk through any artefact on this page — the data dictionary, the backlog, the pipeline, all of it.</p>
+              <h2 id="contact-title">Hiring an engineer who speaks business?</h2>
+              <p class="section-sub">I'm in Perth and available now. Bring me a messy problem — I'll bring back a spec, a build, and the tests that prove it. Happy to walk through anything on this page, artefact by artefact.</p>
             </header>
 
             <div class="contact-channels reveal">
