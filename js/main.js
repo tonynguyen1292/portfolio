@@ -79,7 +79,7 @@
       if (e.key === 'Escape' && navMenu.classList.contains('is-open')) { setMenu(false); burger.focus(); }
     });
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 860) setMenu(false);
+      if (window.innerWidth > 920) setMenu(false);
     });
   }
 
