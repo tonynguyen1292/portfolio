@@ -53,6 +53,7 @@
     "name": "Duc Vy Nguyen",
     "alternateName": "Vy Nguyen",
     "jobTitle": "Software Engineer",
+    "worksFor": { "@type": "Organization", "name": "Viewport XR" },
     "email": "mailto:tonynguyen1996.jb@gmail.com",
     "url": "https://vynguyen-perth.netlify.app/",
     "image": "https://vynguyen-perth.netlify.app/assets/og-image.png",
@@ -235,7 +236,7 @@ def list_sites(region: str | None,
             <p class="reveal">My route here runs through three countries: a computer science degree in Ho Chi Minh City, a cybersecurity diploma in Canada, and a Master of Computer Science at Edith Cowan University here in Perth. Along the way I noticed that projects rarely fail in the code — they fail in the gap between what the business meant and what the team heard.</p>
             <p class="reveal">So I made that gap my specialty — from both sides. At Spirited Thinking I turned a client's idea for an AI image-classification system into functional specs and test cases the delivery team built against. At FPT I automated SAP reporting in ABAP after sitting with the people who actually ran the reports. In 2026 I put a credential behind each half: the ECBA from the IIBA on top of my Master of Computer Science — then shipped a portfolio the way real teams ship, with requirements catalogues, sprint backlogs, test suites and CI.</p>
             <p class="reveal">That's the profile: an engineer who writes the requirements, and an analyst who ships the build. Developers get specs they don't have to translate; the business gets software it can trace back to what it actually asked for.</p>
-            <p class="about-now reveal"><span class="now-dot" aria-hidden="true"></span><strong>Now:</strong>&nbsp;completing an ACS Professional Year in IT · interviewing for Software Engineer and ICT Business Analyst roles in Perth · available now</p>
+            <p class="about-now reveal"><span class="now-dot" aria-hidden="true"></span><strong>Now:</strong>&nbsp;joining Viewport XR (immersive tech, Perth) from August 2026 · completing an ACS Professional Year in IT · open to freelance data &amp; simulation builds</p>
           </div>
 
           <div class="about-cards">
@@ -272,6 +273,7 @@ def list_sites(region: str | None,
         <div class="filter-bar reveal" role="group" aria-label="Filter projects by discipline">
           <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">All work</button>
           <button class="filter-chip" type="button" data-filter="build" aria-pressed="false">Full-stack delivery</button>
+          <button class="filter-chip" type="button" data-filter="sim" aria-pressed="false">Simulation &amp; 3D</button>
           <button class="filter-chip" type="button" data-filter="ba" aria-pressed="false">Business analysis</button>
           <button class="filter-chip" type="button" data-filter="data" aria-pressed="false">Data &amp; dashboards</button>
           <button class="filter-chip" type="button" data-filter="ml" aria-pressed="false">Machine learning</button>
@@ -290,13 +292,40 @@ def list_sites(region: str | None,
             <p class="project-tagline">Raw CSV → governed, tested application.</p>
             <p class="project-summary">A Western Australian government mining dataset — 421 sites across 356 projects — shipped as a tested FastAPI + React application with Docker and CI, and built on real BA discovery: a requirements catalogue, a 19-field data dictionary, a five-step SQL pipeline and a two-page Power BI dashboard.</p>
             <ul class="metric-chips" aria-label="Key numbers">
-              <li>421 sites</li><li>356 projects</li><li>3 sprints</li><li>41 issues</li>
+              <li>Live app</li><li>421 sites</li><li>356 projects</li><li>3 sprints</li><li>41 issues</li>
             </ul>
             <div class="project-actions">
               <button class="btn btn-text case-open" type="button" data-case="case-wa-mining">Read the case study
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
               </button>
+              <div class="hero-social">
+              <a class="icon-link" href="https://wa-mining.netlify.app" rel="noopener" aria-label="Open the live WA Mining application">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7m0 0H9m8 0v8"/></svg>
+              </a>
               <a class="icon-link" href="https://github.com/tonynguyen1292/WA_Mining" rel="noopener" aria-label="WA Mining repository on GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7 0-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .6 1.4.2 2.4.1 2.7.7.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2Z" fill="currentColor" stroke="none"/></svg>
+              </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-cats="sim" tabindex="-1">
+            <div class="project-tags">
+              <span class="tag tag--accent">In progress</span>
+              <span class="tag">Simulation &amp; 3D</span>
+              <span class="tag">Unity / C#</span>
+            </div>
+            <h3 class="project-title">Shift Supervisor Sim</h3>
+            <p class="project-tagline">The same mining data — spatial, 3D, walkable.</p>
+            <p class="project-summary">A deliberately small Unity/C# prototype answering "what's the status of my sites?" spatially instead of in charts — now evolving into a simulation-focused showcase, with v2 scoped by a validated requirements discovery before a single scene is built.</p>
+            <ul class="metric-chips" aria-label="Key numbers">
+              <li>Unity · C#</li><li>v1 shipped</li><li>v2 discovery ✓</li>
+            </ul>
+            <div class="project-actions">
+              <button class="btn btn-text case-open" type="button" data-case="case-unity">Read the case study
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+              </button>
+              <a class="icon-link" href="https://github.com/tonynguyen1292/WA_Mining/tree/main/prototypes/unity-shift-supervisor-demo" rel="noopener" aria-label="Unity prototype folder on GitHub">
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7 0-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .6 1.4.2 2.4.1 2.7.7.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2Z" fill="currentColor" stroke="none"/></svg>
               </a>
             </div>
@@ -368,9 +397,9 @@ def list_sites(region: str | None,
             <div class="skill-body" id="sg-eng">
               <div class="skill-body-inner">
                 <ul class="chip-list">
-                  <li>Python</li><li>FastAPI</li><li>React</li><li>TypeScript</li><li>REST APIs</li><li>Docker</li><li>Git &amp; GitHub Actions</li><li>Automated testing (pytest, Vitest)</li><li>PyTorch</li>
+                  <li>Python</li><li>FastAPI</li><li>React</li><li>TypeScript</li><li>REST APIs</li><li>C#</li><li>Unity</li><li>Docker</li><li>Git &amp; GitHub Actions</li><li>Automated testing (pytest, Vitest)</li><li>PyTorch</li>
                 </ul>
-                <p class="skill-proof"><strong>Receipts:</strong> the WA Mining full-stack application with CI-enforced test suites · the PCB re-implementation.</p>
+                <p class="skill-proof"><strong>Receipts:</strong> the WA Mining full-stack application with CI-enforced test suites · the Unity shift-supervisor prototype · the PCB re-implementation.</p>
               </div>
             </div>
           </div>
@@ -454,15 +483,25 @@ def list_sites(region: str | None,
           <li class="tl-item reveal" data-kind="milestone">
             <div class="tl-marker" aria-hidden="true"></div>
             <div class="tl-content">
+              <div class="tl-meta"><span class="tl-date">From Aug 2026</span><span class="tl-tag tl-tag--accent">Next</span></div>
+              <h3>Intern · Viewport XR</h3>
+              <p>Immersive-technology studio in Perth — Unity-based VR/AR training simulations, 3D visualisation and digital twins for mining and resources clients.</p>
+            </div>
+          </li>
+
+          <li class="tl-item reveal" data-kind="milestone">
+            <div class="tl-marker" aria-hidden="true"></div>
+            <div class="tl-content">
               <div class="tl-meta"><span class="tl-date">2026</span><span class="tl-tag tl-tag--accent">Milestone</span></div>
               <h3>ECBA certified · full-stack portfolio shipped</h3>
-              <p>Entry Certificate in Business Analysis issued by the IIBA (July 2026). WA Mining shipped end-to-end as a tested FastAPI + React application; the Healthcare case study through discovery, governance and Sprint 1.</p>
+              <p>Entry Certificate in Business Analysis issued by the IIBA (July 2026). WA Mining shipped end-to-end and deployed live; the Healthcare case study through discovery, governance and Sprint 1; the portfolio then expanded into Unity/C# with a spatial prototype of the same mining data.</p>
               <button class="tl-more" type="button" aria-expanded="false">Details</button>
               <div class="tl-detail">
                 <ul>
                   <li>ECBA credential ID 188039608 — earned while running both portfolio projects.</li>
                   <li>WA Mining: requirements → SQL pipeline → Power BI → tested FastAPI/React app, delivered through a 41-issue Jira backlog across 3 sprints.</li>
                   <li>Healthcare: business case, project charter, stakeholder and risk registers; Sprint 1 ingested and verified 73,132 records across all 31 PHNs.</li>
+                  <li>Unity/C# shift-supervisor prototype (v1) shipped; v2 scoped through a validated requirements discovery — facts before scenes.</li>
                 </ul>
               </div>
             </div>
@@ -598,7 +637,7 @@ def list_sites(region: str | None,
             <div class="toolkit">
               <div class="toolkit-group"><span class="toolkit-label">Analysis &amp; delivery</span><ul class="chip-list"><li>Jira</li><li>Confluence</li><li>Notion</li><li>BPMN tooling</li></ul></div>
               <div class="toolkit-group"><span class="toolkit-label">Data</span><ul class="chip-list"><li>PostgreSQL</li><li>Power BI</li><li>Excel</li><li>Jupyter</li></ul></div>
-              <div class="toolkit-group"><span class="toolkit-label">Build</span><ul class="chip-list"><li>VS Code</li><li>Git &amp; GitHub</li><li>Docker</li><li>GitHub Actions</li></ul></div>
+              <div class="toolkit-group"><span class="toolkit-label">Build</span><ul class="chip-list"><li>VS Code</li><li>Git &amp; GitHub</li><li>Docker</li><li>GitHub Actions</li><li>Unity</li></ul></div>
             </div>
           </article>
         </div>
@@ -612,8 +651,8 @@ def list_sites(region: str | None,
           <div class="contact-copy">
             <header class="section-head reveal">
               <p class="eyebrow">Contact</p>
-              <h2 id="contact-title">Hiring an engineer who speaks business?</h2>
-              <p class="section-sub">I'm in Perth and available now. Bring me a messy problem — I'll bring back a spec, a build, and the tests that prove it. Happy to walk through anything on this page, artefact by artefact.</p>
+              <h2 id="contact-title">Got a build in mind?</h2>
+              <p class="section-sub">I'm in Perth, joining Viewport XR in August, and taking freelance data-product and simulation work. Bring me a messy problem — I'll bring back a spec, a build, and the tests that prove it.</p>
             </header>
 
             <div class="contact-channels reveal">
@@ -728,10 +767,13 @@ def list_sites(region: str | None,
       <ul class="chip-list"><li>SQL</li><li>PostgreSQL</li><li>Power BI</li><li>DAX</li><li>Python</li><li>FastAPI</li><li>React</li><li>TypeScript</li><li>Docker</li><li>GitHub Actions</li><li>Jira</li></ul>
 
       <h3>The outcome</h3>
-      <p>One clean dataset every consumer trusts, a dashboard that answers the portfolio questions in two clicks, and a tested application proving the requirements were buildable. The BA artefacts weren't paperwork — they were the spec the software was verified against.</p>
+      <p>One clean dataset every consumer trusts, a dashboard that answers the portfolio questions in two clicks, and a tested application proving the requirements were buildable. The BA artefacts weren't paperwork — they were the spec the software was verified against. The application now runs <strong>live</strong> — a Netlify Functions API over a managed Postgres database.</p>
 
       <div class="case-links">
-        <a class="btn btn-primary" href="https://github.com/tonynguyen1292/WA_Mining" rel="noopener">View repository
+        <a class="btn btn-primary" href="https://wa-mining.netlify.app" rel="noopener">Open the live app
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7m0 0H9m8 0v8"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="https://github.com/tonynguyen1292/WA_Mining" rel="noopener">View repository
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7m0 0H9m8 0v8"/></svg>
         </a>
         <!-- Jira backlog link removed: the board requires login for anonymous visitors.
@@ -803,6 +845,42 @@ def list_sites(region: str | None,
 
       <div class="case-links">
         <a class="btn btn-primary" href="https://github.com/tonynguyen1292/Person-Retrieval" rel="noopener">View repository
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7m0 0H9m8 0v8"/></svg>
+        </a>
+      </div>
+    </article>
+  </template>
+
+  <template id="case-unity">
+    <article class="case">
+      <p class="eyebrow">Case study · in progress</p>
+      <h2 id="case-dialog-title">Shift Supervisor Sim — the same mining data, spatially</h2>
+      <ul class="metric-chips"><li>Unity · C#</li><li>v1 prototype</li><li>v2 discovery validated</li></ul>
+
+      <h3>The problem</h3>
+      <p>The WA Mining web app answers "how many, where, what stage" in charts and tables. But some questions supervisors actually ask are spatial — what's near what, what a site looks like as a place rather than a row. And simulation is the language of mining training in WA: digital twins, VR walk-throughs, operational rehearsal.</p>
+
+      <h3>My role</h3>
+      <p>Sole builder — deliberately in an unfamiliar stack. The point is demonstrating how I enter new territory: small scope, real data, discovery before design.</p>
+
+      <h3>What I did</h3>
+      <ul class="case-list">
+        <li>Shipped a <strong>single-scene Unity/C# prototype</strong> (v1) exploring a spatial, 3D view of the same site-level data model the web app uses — scoped honestly in its README as a learning prototype, not a product build.</li>
+        <li>Scoped v2 the way I scope everything: <strong>as-is analysis</strong> of the repo and PR history, a <strong>structured elicitation</strong>, context research, and a <strong>validated 5W1H with a stakeholder register</strong> — public in the repo before any scenes are built.</li>
+        <li>Direction for v2: a <strong>simulation-focused shift-supervisor showcase</strong> — "what's the status of my sites?", answered as a place you can move through.</li>
+      </ul>
+
+      <h3>Tools</h3>
+      <ul class="chip-list"><li>Unity</li><li>C#</li><li>The WA Mining data model</li><li>Requirements discovery</li></ul>
+
+      <h3>The outcome (so far)</h3>
+      <p>v1 proves the stack pickup; v2's scope is traceable to elicited facts rather than enthusiasm. Scenes follow the spec — watch the branch.</p>
+
+      <div class="case-links">
+        <a class="btn btn-primary" href="https://github.com/tonynguyen1292/WA_Mining/tree/main/prototypes/unity-shift-supervisor-demo" rel="noopener">View the prototype
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7m0 0H9m8 0v8"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="https://github.com/tonynguyen1292/WA_Mining/blob/feature/unity-shift-supervisor-v2/prototypes/unity-shift-supervisor-demo/DISCOVERY.md" rel="noopener">Read the discovery
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7m0 0H9m8 0v8"/></svg>
         </a>
       </div>
